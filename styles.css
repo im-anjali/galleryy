@@ -1,0 +1,124 @@
+body {
+    background-image: linear-gradient(to top right, #8B5CF6, #EC4899);
+    min-height: 100vh;
+    margin: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.main {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure it uses full width */
+}
+
+.slider {
+    /* position: relative; */
+    width: 80%; /* Adjust as needed for responsiveness */
+    max-width: 800px; 
+    height: 370px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#vanta-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+  }
+.item {
+    position: absolute;
+    width: 50%; /* Increased width */
+    height: 50%; /* Adjust height accordingly */
+    text-align: justify;
+    border-radius: 10px;
+    background-color: rgb(15, 15, 33);
+    padding: 3px;
+    box-sizing: border-box; /* Include padding and border in width and height */
+    transition: transform 0.5s ease; /* Smooth transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item img {
+    width: 100%; /* Make the image span the full width of the card */
+    height: 100%; /* Make the image span the full height of the card */
+    object-fit: cover; /* Cover the card area while maintaining aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+}
+
+
+#next, #prev {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#next {
+    right: 10px; /* Adjust positioning */
+}
+
+#prev {
+    left: 10px; /* Adjust positioning */
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    #next, #prev {
+        font-size: x-large; /* Adjust font size for buttons on smaller screens */
+    }
+}
+.logo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    /* max-width: 550px; Restrict max width */
+    /* margin: 50px auto; Center horizontally with margin */
+    margin-top: 150px;
+    transition: box-shadow 0.5s ease-out;
+    color: aliceblue;
+   
+    
+  }
+  
+  .logo1 img {
+    height: auto; /* Adjust height based on image aspect ratio */
+    max-height: 150px; /* Restrict max height */
+    transition: filter 0.5s ease-out;
+    filter: drop-shadow(5px 3px 5px rgb(91, 113, 236)); /* More intense glow for the image */
+    margin-top:-70% ;
+  }
+  
+  .logo1:hover {
+    cursor: pointer;
+    /* Apply glow effect to the container */
+    /* box-shadow: 0 0 10px 5px white; */
+  }
+  .about {
+    color: aliceblue;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'nexa';
+    text-shadow: 0 0 20px rgba(0, 153, 255, 1), 0 0 30px rgba(0, 153, 255, 0.8), 0 0 40px rgba(0, 153, 255, 0.6);
+   margin-top: -50%;
+  }
